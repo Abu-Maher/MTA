@@ -93,8 +93,8 @@ function snakecam_updateSnakeCam()
         camX, camY, camZ = ( currentX + 0.9 * ( hitX - currentY ) ), ( currentY + 0.9 * ( hitY - currentY ) ), ( currentZ + 0.9 * ( hitZ - currentZ ) )
     end
     setCameraMatrix(camX, camY, camZ-0.7, currentX, currentY, currentZ-0.7, roll, fov)
-    dxDrawImage(0, 0, screenX, screenY, 'images/scanlines.png', 0, 0, 0, tocolor(255,255,255,100))
-    dxDrawImage(0, screenY * lineY, screenX, screenY * 0.1, 'images/line.png', 0, 0, 0, tocolor(255,255,255,180))
+    dxDrawImage(0, 0, screenX, screenY, 'snakecam/scanlines.png', 0, 0, 0, tocolor(255,255,255,100))
+    dxDrawImage(0, screenY * lineY, screenX, screenY * 0.1, 'snakecam/line.png', 0, 0, 0, tocolor(255,255,255,180))
     if lineY <= 1 then
         lineY = lineY + 0.001
     elseif lineY > 1 then
